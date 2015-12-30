@@ -13,3 +13,4 @@ g5_tree/
 naver*.html
 ftpsync.settings
 .gitattributes
+.gitignore
