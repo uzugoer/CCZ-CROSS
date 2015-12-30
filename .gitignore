@@ -1,0 +1,15 @@
+!.gitignore
+/.htaccess
+data/
+test/
+sirgle/
+test.php
+*.key
+*.sh
+cheditor*/
+ckeditor*/
+log/
+g5_tree/
+naver*.html
+ftpsync.settings
+.gitattributes
