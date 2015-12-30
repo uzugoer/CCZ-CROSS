@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    src: url(//i1.daumcdn.net/cfs.tistory/static/font/notokr-regular.woff2) format('woff2'),
+    url(//i1.daumcdn.net/cfs.tistory/static/font/notokr-regular.woff) format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans Korean';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}

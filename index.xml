@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+	<information>
+		<name>CCZ-CROSS</name>
+		<version>1.0</version>
+		<description>
+			<![CDATA[ 다양한 글을 여러 기기에서 읽기 좋게 보여주는 스킨입니다. ]]>
+		</description>
+		<license>
+			<![CDATA[ MIT License ]]>
+		</license>
+	</information>
+	<author>
+		<name>흉내쟁이</name>
+		<homepage>http://copycatz.tistory.com</homepage>
+		<email>uzugoer@gmail.com</email>
+	</author>
+	<contest>
+		<description>요청 배포작 - 크로스브라우징</description>
+		<preview></preview>
+		<document></document>
+	</contest>
+	<default>
+		<recentEntries>10</recentEntries>
+		<recentComments>10</recentComments>
+		<recentTrackbacks>10</recentTrackbacks>
+		<itemsOnGuestbook>10</itemsOnGuestbook>
+		<tagsInCloud>15</tagsInCloud>
+		<sortInCloud>3</sortInCloud>
+		<expandComment>1</expandComment>
+		<expandTrackback>0</expandTrackback>
+		<lengthOfRecentNotice>40</lengthOfRecentNotice>
+		<lengthOfRecentEntry>40</lengthOfRecentEntry>
+		<lengthOfRecentComment>40</lengthOfRecentComment>
+		<lengthOfRecentTrackback>40</lengthOfRecentTrackback>
+		<lengthOfLink>40</lengthOfLink>
+		<showListOnCategory>1</showListOnCategory>
+		<showListOnArchive>1</showListOnArchive>
+		<commentMessage>
+			<none>0</none>
+			<single>1</single>
+		</commentMessage>
+		<trackbackMessage>
+			<none>0</none>
+			<single>1</single>
+		</trackbackMessage>
+		<tree>
+			<color>000000</color>
+			<bgColor>ffffff</bgColor>
+			<activeColor>000000</activeColor>
+			<activeBgColor>eeeeee</activeBgColor>
+			<labelLength>27</labelLength>
+			<showValue>1</showValue>
+		</tree>
+		<contentWidth>1000</contentWidth>
+	</default>
+</skin>
