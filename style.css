@@ -2824,7 +2824,7 @@ table.triple td{width:33.33%;}
 .moreless_top span:before,.moreless_bottom span:before{content:"\e60e";}
 .moreless_top {border-bottom:0;}
 .moreless_bottom {border-top:0;}
-.moreless_content {padding: 1.5em 15px; padding-bottom: 1em; border-top-style: dashed; border-bottom-style: dashed;}
+.moreless_content {padding: 1.5em 15px;border-top-style:dashed;border-bottom-style:dashed;}
 .moreless_content > p {margin: 0;}
 /* 각주 */
 sup.footnote{display: inline-block;}
