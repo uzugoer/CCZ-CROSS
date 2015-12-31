@@ -2816,14 +2816,15 @@ table.triple td{width:33.33%;}
 .imageblock>a[href*="attachment"]:hover:before,.imageblock>a[href*="attachment"]:focus:before{border-right-color:#f5f5f5;}
 /* 더보기 */
 .moreless_fold,.moreless_top,.moreless_bottom,.moreless_content{position:relative;padding-left:80px;padding-right:15px;background-color:#fff;border:1px solid #e1e4e5;}
-.moreless_fold,.moreless_top,.moreless_bottom{display:table-cell;width:10000px;height:80px;padding-top:15px;padding-bottom:15px;vertical-align:middle;color:#72787f;font-weight:bold;border-top-width:3px;}
+.moreless_fold,.moreless_top,.moreless_bottom{display:table-cell;width:10000px;height:80px;vertical-align:middle;color:#72787f;font-weight:bold;border-top-width:3px;}
 .moreless_fold span:before,.moreless_top span:before,.moreless_bottom span:before{position:absolute;left:15px;top:15px;font-size:26px;background-color:#f5f5f5;border-radius:50%;font-family:'cczicon';display:inline-block;width:50px;line-height:50px;text-align:center;color:#72787f;vertical-align:middle;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-.moreless_top {margin-bottom:0}
+.moreless_top {margin-bottom:0;}
 .moreless_bottom {margin-top:0;}
 .moreless_fold span:before {content:"\e619";}
 .moreless_top span:before,.moreless_bottom span:before{content:"\e60e";}
-.moreless_top,.moreless_content{border-bottom:0;}
-.moreless_bottom,.moreless_content{border-top:0;}
+.moreless_top {border-bottom:0;}
+.moreless_bottom {border-top:0;}
+.moreless_content {padding: 1.5em 15px; padding-bottom: 1em; border-top-style: dashed; border-bottom-style: dashed;}
 .moreless_content > p {margin: 0;}
 /* 각주 */
 sup.footnote{display: inline-block;}

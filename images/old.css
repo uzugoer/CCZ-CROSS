@@ -803,8 +803,8 @@ table.dual .imageblock img.landscape,table.triple .imageblock img.landscape{*hei
 /* 파일첨부 */
 .imageblock>a[href*="attachment"]{*zoom: expression(this.runtimeStyle['zoom'] = '1',this.insertBefore(document.createElement("i"),this.firstChild).className="ie-before",this.firstChild.innerHTML = '&#xe656;');}.imageblock>a[href*="attachment"]>.ie-before{*line-height:49px;}
 /* 더보기 */
-.moreless_fold,.moreless_top,.moreless_bottom{*display:block;*width:auto;*height:auto; *padding-left:15px;*line-height:40px;*zoom:1;}
-.moreless_content{*padding-left: 15px;*zoom:1;}
+.moreless_fold,.moreless_top,.moreless_bottom{*display:block;*width:auto;*height:auto;*padding-left:15px;*line-height:40px;*zoom:1;}
+.moreless_content{*zoom:1;}
 /*각주 */
 sup.footnote{font-size:11px;*display:inline;*line-height:normal;}div.footnotes{font-family:"돋움", dotum;}
 
