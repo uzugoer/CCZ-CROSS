@@ -112,6 +112,10 @@ td.visible-lg {
 
 /* 레이아웃
 -------------------------------------------------------------------------- */
+#site-header,
+#site-footer {
+    min-width: 1000px;
+}
 #site-header {
 	padding-left: 15px;
     padding-right: 15px;
