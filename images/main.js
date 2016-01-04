@@ -523,22 +523,18 @@ $(document).ready(function() {
 	});
 
 	//폼액션
-	var focusWrap = $('.focus-wrap');
-	var focusTarget = $('.focus-target');
-
-	focusTarget.on('focus', function(){
+	$(document).on('focus', '.focus-target', function(){
 		$(this).closest('.focus-wrap').addClass('focus');
 	});
-	focusTarget.on('focusout', function(){
+	$(document).on('focusout', '.focus-target', function(){
 	    $(this).closest('.focus-wrap').removeClass('focus');
 	});
 
-	var textareaTarget = $('.textboxs textarea');
-	textareaTarget.on('focus', function(){
+	$(document).on('focus','.textboxs textarea', function(){
 		$('.write-form').addClass('active');
 	    $(this).siblings('label').fadeOut('fast');
 	});
-	textareaTarget.on('focusout', function(){
+	$(document).on('focusout','.textboxs textarea', function(){
 	    if($(this).val() == ''){
 	        $(this).siblings('label').fadeIn('fast');
 	    }
