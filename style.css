@@ -1999,6 +1999,26 @@ hr.ng-margin {
     #guest-list .reply-list .cng-content {margin-right: 50px;}
 }
 
+/* _이전 댓글 더보기 */
+.tt_more_preview_comments_wrap {
+    width: 120px;
+    margin: 15px auto 30px;
+    border-bottom: 0 !important;
+}
+.tt_more_preview_comments_wrap + li {border-top: 1px solid #eaeaec;}
+.tt_more_preview_comments_text {
+    padding: 5px 8px;
+    font-size: 12px;
+    color: #777;
+    text-shadow: 1px 1px #fff;
+    background: #f5f5f5;
+    background: linear-gradient(#ffffff, #f4f4f4);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',endColorstr='#f4f4f4',GradientType=0 );
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,1), 0 1px 3px -1px rgba(45,60,72,0.1);
+}
+
 
 /* 공지사항
 -------------------------------------------------------------------------- */
