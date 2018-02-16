@@ -239,7 +239,8 @@ var thumbObj = {  //이미지 추출을 위한
     video: /<video.*>/i,
     sound: /api.soundcloud.com\/tracks\/?([0-9]+)/i,
     daily: /dailymotion.com\/embed\/video\/([a-zA-Z0-9_]+)/i,
-    daum: /videofarm.daum.net\/controller\/video\/viewer\/Video.html\?vid=([0-9a-zA-Z]+)/i,
+    daum: /videofarm.daum.net\/controller\/video\/viewer\/Video.html\?.*vid=([0-9a-zA-Z]+)/i,
+    kakao: /tv.kakao.com\/embed\/player\/cliplink\/([(a-zA-Z0-9)]+)/i,
 
     pandora: /(?:flvr|channel).pandora.tv\/(?:flv2pan|php)\/(?:embed.fr1.ptv\?|flvmovie.dll\/).*?userid=([(a-zA-Z0-9)]+).*?\&(?:|amp;)prgid=([(0-9)]+)/i,
     naver: /serviceapi.rmcnmv.naver.com\/flash\/outKeyPlayer.nhn\?vid=([(A-Za-z0-9)]+)*.+outKey=([(A-Za-z0-9)]+)*/i
@@ -262,6 +263,7 @@ function checkSort(target, data) {
     		vimeoExr = thumbObj.regExr.vimeo,
     		videoExr = thumbObj.regExr.video,
     		daumExr = thumbObj.regExr.daum,
+    		//kakaoExr = thumbObj.regExr.kakao,
     		dailyExr = thumbObj.regExr.daily,
     		exrSound = thumbObj.regExr.sound,
         	totalDefarticle = $.Deferred(),
@@ -319,13 +321,28 @@ function checkSort(target, data) {
         if (daumData != "none") {
         	var matching = daumData.indexOf("vid="),
         		vid = daumData.slice(matching+4),
-        		vsrc = 'http://i1.daumcdn.net/svc/image/U03/tvpot_thumb/'+vid+'/thumb.png';
+        		vsrc = 'https://t1.daumcdn.net/thumb/C640x360.q50.fjpg/?fname=http://t1.daumcdn.net/tvpot/thumb/'+vid+'/thumb.png';
 
         	classTarget.prepend(stringPre+'<img src="'+vsrc+'" class="landscape">'+stringEnd);
         	totalDefarticle.resolve();
         	return;
 			// var ajaxUrl = 'http://tvpot.daum.net/clip/ClipInfoXml.do?vid='+vid;
         }
+
+        /*
+         * 카카오tv 썸네일 추출불가 vid에 해당하는 부분이 변환되어 있다 
+         * 
+        var kakaoData = conData.match(kakaoExr) ? conData.match(kakaoExr)[0] : "none";
+        if (kakaoData != "none") {
+        	var matching = kakaoData.indexOf("cliplink/"),
+        		vid = kakaoData.slice(matching+9),
+        		vsrc = '//t1.daumcdn.net/thumb/C640x360.q50.fjpg/?fname=http://t1.daumcdn.net/tvpot/thumb/'+vid+'/thumb.png';
+
+        	classTarget.prepend(stringPre+'<img src="'+vsrc+'" class="landscape">'+stringEnd);
+        	totalDefarticle.resolve();
+        	return;
+        }
+        */
 
         var dailyData = conData.match(dailyExr) ? conData.match(dailyExr)[0] : "none";
         if (dailyData != "none") {
@@ -465,7 +482,7 @@ $(document).ready(function() {
 			});
 		});
 
-		$('.e-content iframe[src*="player.vimeo.com"], .e-content iframe[src*="//www.youtube.com"], .e-content iframe[src*="//videofarm.daum.net"], .e-content .iframe-player').each(function(){
+		$('.e-content iframe[src*="player.vimeo.com"], .e-content iframe[src*="//www.youtube.com"], .e-content iframe[src*="//videofarm.daum.net"], .e-content iframe[src*="//tv.kakao.com"], .e-content .iframe-player').each(function(){
 			var $this = $(this);
 
 			if (!($this.parent().hasClass('embed-responsive'))){
